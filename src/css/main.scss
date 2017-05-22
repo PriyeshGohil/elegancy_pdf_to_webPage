@@ -4,6 +4,7 @@
 @import 'social';
 @import 'billboard';
 @import 'feature';
+@import 'team';
 
 
 // custom fonts
@@ -30,11 +31,23 @@
 
 .testimonials {
     height: 690px;
-    background: #d1d1d1;
+    // background: #d1d1d1;
 }
 
 .heading {
     font: 500 26px 'Raleway', sans-serif;
-    margin: 0;
+    padding: 100px 0 125px 0;
+    text-align: center;
+    position: relative;
+    max-width: 200px;
+    margin: 0 auto;
+    text-transform: uppercase;
+
+    &:after {
+        content: url('../../imgs/heading-line.png');
+        position: absolute;
+        right: 60px;
+        bottom: 75px;
+    }
 
 }

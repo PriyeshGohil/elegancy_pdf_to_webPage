@@ -1,0 +1,45 @@
+.team-wrapper {
+    background: #fafafa;
+}
+.team {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+
+    &__img {
+        max-height: 250px;
+    }
+
+    &__name, &__title {
+        margin: 0;
+        font: 14px 'Raleway', sans-serif;
+        color: #454546;
+    }
+
+    &__name {
+        margin-top: 70px;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -45px;
+            width: 0px;
+            height: 25px;
+            border: 1px dashed #575757;
+            right: 50%;
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-weight: 500
+    }
+}
