@@ -2,7 +2,15 @@
 @import 'header';
 @import 'menu';
 @import 'social';
+@import 'billboard';
 
+
+// custom fonts
+
+@font-face {
+    font-family: 'EternalFascination';
+    src: url('../fonts/EternalFascination.ttf');
+}
 
 body {
     background: url('../../imgs/dominikschroder14534.jpg');
