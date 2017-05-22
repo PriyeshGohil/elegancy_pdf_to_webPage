@@ -3,6 +3,7 @@
 @import 'menu';
 @import 'social';
 @import 'billboard';
+@import 'feature';
 
 
 // custom fonts
@@ -12,10 +13,11 @@
     src: url('../fonts/EternalFascination.ttf');
 }
 
-body {
-    background: url('../../imgs/dominikschroder14534.jpg');
+.wrapper {
+    background: url('../../imgs/dominikschroder14534.png');
         background-size: cover;
     background-position: 50%;
     width: 100vw;
     min-height: 100vh;
+    padding-top: 55px;
 }
