@@ -49,7 +49,7 @@
     padding: 0 0 125px 0;
     text-align: center;
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     text-transform: uppercase;
 
     &:after {
@@ -62,4 +62,21 @@
         bottom: 75px;
     }
 
+    // if a sub-heading follows the heading class
+
+    &--hasSub {
+        padding: 0;
+        padding-bottom: 20px;
+
+        &:after {
+            bottom: -100px;
+        }
+    }
+}
+
+.sub-heading {
+    font: 16px 'Raleway', sans-serif;
+    color:#9f9f9f;
+    text-align: center;
+    margin: 0;
 }
