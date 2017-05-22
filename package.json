@@ -1,0 +1,25 @@
+{
+  "name": "elegancy_pdf_to_webpage",
+  "version": "1.0.0",
+  "description": "converting a psd to a website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriyeshGohil/elegancy_pdf_to_webPage.git"
+  },
+  "author": "Priyesh Gohil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PriyeshGohil/elegancy_pdf_to_webPage/issues"
+  },
+  "homepage": "https://github.com/PriyeshGohil/elegancy_pdf_to_webPage#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jit-grunt": "^0.10.0"
+  }
+}
