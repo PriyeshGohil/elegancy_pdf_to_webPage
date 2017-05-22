@@ -25,6 +25,12 @@ module.exports = function(grunt) {
         tasks: ['sass:target']
       },
     },
+
+    copy: {
+      main: {
+        files: [ {expand: true, flatten: true, src: ['src/fonts/*'], dest: 'build/fonts'} ]
+      }
+    }
   });
   grunt.registerTask('default', ['watch']);
 };
