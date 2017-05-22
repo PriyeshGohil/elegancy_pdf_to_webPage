@@ -1,0 +1,43 @@
+.feature-wrapper {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.feature {
+    text-align: center;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    &__img {
+        height: 45px;
+    }
+
+    &__heading {
+        margin: 0;
+        margin-top: 70px;
+        padding-top: 10px;
+        font: 700 16px 'Raleway', sans-serif;
+        color: #454546;
+        position: relative;
+        text-transform: uppercase;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -45px;
+            width: 0px;
+            height: 25px;
+            border: 1px dashed #575757;
+            right: 50%;
+        }
+    }
+
+    &__text {
+        font: 14px 'Raleway', sans-serif;
+        color: #727272;
+        line-height: 2;
+    }
+}
