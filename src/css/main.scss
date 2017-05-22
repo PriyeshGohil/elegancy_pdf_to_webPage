@@ -6,6 +6,7 @@
 @import 'feature';
 @import 'team';
 @import 'gallery';
+@import 'priceTable';
 
 
 // custom fonts
@@ -69,7 +70,7 @@
         padding-bottom: 20px;
 
         &:after {
-            bottom: -100px;
+            content: none;
         }
     }
 }
@@ -79,4 +80,16 @@
     color:#9f9f9f;
     text-align: center;
     margin: 0;
+    position: relative;
+    padding-bottom: 125px;
+
+     &:after {
+        content: url('../../imgs/heading-line.png');
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+    }
 }
