@@ -5,6 +5,7 @@
 @import 'billboard';
 @import 'feature';
 @import 'team';
+@import 'gallery';
 
 
 // custom fonts
@@ -34,9 +35,18 @@
     // background: #d1d1d1;
 }
 
+.homepage-section {
+    padding: 100px 0;
+
+    &--bgcolor {
+        background: #fafafa;
+    }
+}
+
+
 .heading {
     font: 500 26px 'Raleway', sans-serif;
-    padding: 100px 0 125px 0;
+    padding: 0 0 125px 0;
     text-align: center;
     position: relative;
     max-width: 200px;
