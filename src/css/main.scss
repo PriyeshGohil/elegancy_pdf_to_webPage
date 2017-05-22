@@ -1,1 +1,13 @@
 @import 'normalise';
+@import 'header';
+@import 'menu';
+@import 'social';
+
+
+body {
+    background: url('../../imgs/dominikschroder14534.jpg');
+        background-size: cover;
+    background-position: 50%;
+    width: 100vw;
+    min-height: 100vh;
+}

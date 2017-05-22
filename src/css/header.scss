@@ -1,0 +1,25 @@
+.header {
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    height: 55px;
+
+    &__menu {
+        flex: 1;
+    }
+}
+
+.header-logo {
+    padding-right: 42px;
+    border-right: 1px solid #575757;
+    margin-right: 50px;
+    height: 30px;
+
+    &__text {
+        font: 300 22px 'Raleway', sans-serif;
+        margin: 0;
+    }
+}
+
