@@ -1,0 +1,35 @@
+ .btn {
+    border: 3px solid #395e66;
+    max-width: 210px;
+    padding: 12px;
+    color: #395e66;
+    text-align: center;
+    
+    a {
+        font: 700 16px 'Raleway', sans-serif;
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        background: #395e66;
+        color: white;
+    }
+}
+
+.btn--filled {
+     background: #395e66;
+      color: white;
+
+      &:hover {
+           color: #395e66;
+           background: white;
+      }
+}
+
+.btn--center {
+    margin: 0 auto;
+
+}
+

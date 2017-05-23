@@ -82,23 +82,4 @@
         line-height: 3;
         margin-bottom: 55px;
     }
-
-    &__btn {
-        border: 3px solid #395e66;
-        max-width: 210px;
-        padding: 12px;
-        color: #395e66;
-        
-        a {
-            font: 700 16px 'Raleway', sans-serif;
-            text-decoration: none;
-            color: inherit;
-            text-transform: uppercase;
-        }
-
-        &:hover {
-          background: #395e66;
-          color: white;
-        }
-    }
 }
