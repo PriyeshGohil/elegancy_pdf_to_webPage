@@ -1,0 +1,29 @@
+.project {
+    &__title {
+        font: 300 18px 'Raleway', sans-serif;
+        text-transform: uppercase;
+        color: #2d4e55;
+    }
+
+    &__type {
+        text-transform: none;
+        font: 13px 'Raleway', sans-serif;
+        color: #9f9f9f;
+
+        &:before {
+            content: '/';
+        }
+    }
+
+    &__img {
+        max-width: 230px;
+        max-height: 230px;
+        width: 100%;
+        display: block;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
