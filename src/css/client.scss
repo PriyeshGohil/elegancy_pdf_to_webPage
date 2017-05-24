@@ -1,0 +1,21 @@
+.client-wrapper {
+    // depends on container being of display flex, if not make this display flex;
+    flex-wrap: wrap;
+
+}
+
+$margin: 60px;
+$totalClients: 4;
+.client {
+    // width: calc((100% / #{$totalClients}) - #{$margin});
+    // margin-right: $margin;
+    width: 230px;
+    box-sizing: border-box;
+    border: 3px solid #eae9e9;
+    padding: 30px;
+    margin-bottom: $margin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
