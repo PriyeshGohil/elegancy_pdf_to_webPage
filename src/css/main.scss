@@ -10,6 +10,7 @@
 @import 'buttons';
 @import 'project';
 @import 'client';
+@import 'forms';
 
 
 // custom fonts
@@ -72,6 +73,15 @@
     &--hasSub {
         padding: 0;
         padding-bottom: 20px;
+
+        &:after {
+            content: none;
+        }
+    }
+
+    &--noUnderline {
+
+        padding-bottom: 50px;
 
         &:after {
             content: none;

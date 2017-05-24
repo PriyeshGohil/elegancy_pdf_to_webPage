@@ -4,12 +4,15 @@
     padding: 12px;
     color: #395e66;
     text-align: center;
+    background: white;
+    text-transform: uppercase;
+    cursor: pointer;
     
     a {
         font: 700 16px 'Raleway', sans-serif;
         text-decoration: none;
         color: inherit;
-        text-transform: uppercase;
+        text-transform: inherit;
     }
 
     &:hover {

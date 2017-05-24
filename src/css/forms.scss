@@ -1,0 +1,40 @@
+// todo move billboard form styles here!
+
+.form {
+    &__input {
+        height: 50px;
+        box-sizing: border-box;
+        padding: 20px 10px;
+        font-size: 13px;
+        width: 250px;
+        margin-right: 20px;
+        border: none;
+        color: #7c7c7c;
+
+        &--noBorder {
+            border: none;
+        }
+    }
+}
+
+.form--subscribe {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid #eae9e9;
+    margin: 0 auto;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 2px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: white;
+
+    input {
+        margin: 0;
+        flex: 1;
+        border: none;
+        background: transparent;
+    }
+    
+
+}
