@@ -1,15 +1,18 @@
 // todo move billboard form styles here!
 
 .form {
+
+    &__textarea, &__input {
+        box-sizing: border-box;
+        font-size: 13px;
+        color: #7c7c7c;
+        padding: 20px 10px;
+         border: none;
+    }
     &__input {
         height: 50px;
-        box-sizing: border-box;
-        padding: 20px 10px;
-        font-size: 13px;
         width: 250px;
         margin-right: 20px;
-        border: none;
-        color: #7c7c7c;
 
         &--noBorder {
             border: none;
@@ -35,6 +38,34 @@
         border: none;
         background: transparent;
     }
-    
+}
 
+.form--contact {
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 100px;
+    background: white;
+    padding: 50px;
+
+    .input__wrapper {
+        display: flex;
+        margin: 20px 0;
+        
+    }
+    input, textarea {
+        border: 1px solid #eae9e9;
+        margin: 0;
+        flex: 1;
+    }
+
+    &__link {
+        font: 14px 'Raleway', sans-serif;
+        color: #395e66;
+        margin-left: 20px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    } 
 }
