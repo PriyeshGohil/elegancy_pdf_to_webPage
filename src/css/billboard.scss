@@ -1,7 +1,8 @@
 .billboard {
     box-sizing: border-box;
     height: 560px;
-    width: 1100px;
+    max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     padding-top: 140px;
     text-align: center;
@@ -26,7 +27,8 @@
 
     &__form {
         box-sizing: border-box;
-        width: 770px;
+        max-width: 770px;
+        width: 100%;
         padding: 40px;
         background: white;
         margin: 0 auto;
@@ -55,6 +57,24 @@
             font: 300 13px 'Raleway', sans-serif;
             text-transform: uppercase;
         }
-    }
-    
+    }    
 }
+
+@media(max-width: $medium-break) {
+
+    .billboard {
+        padding-top: 100px;
+    }
+    .billboard__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input, button {
+            width: 100%;
+            margin: 10px 0 0 0;
+        }
+    }
+ 
+}
+

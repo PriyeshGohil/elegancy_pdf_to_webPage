@@ -1,5 +1,6 @@
  .btn {
     border: 3px solid #395e66;
+    box-sizing: border-box;
     max-width: 210px;
     width: 100%;
     padding: 12px;
@@ -19,6 +20,10 @@
     &:hover {
         background: #395e66;
         color: white;
+    }
+
+    @media(max-width: $medium-break) {
+        max-width: 100%;
     }
 }
 

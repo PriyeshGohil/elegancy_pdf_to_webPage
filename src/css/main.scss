@@ -1,4 +1,5 @@
 $medium-break: 850px;
+$small-break: 495px;
 
 @import 'normalise';
 @import 'header';
@@ -53,6 +54,10 @@ $medium-break: 850px;
 
     &--bgcolor {
         background: #fafafa;
+    }
+
+    @media(max-width: $medium-break) {
+        padding: 50px 10px;
     }
 }
 
@@ -125,12 +130,18 @@ $medium-break: 850px;
 }
 
 .container {
-     width: 1100px;
-    margin: 0 auto;
+     max-width: 1100px;
+     width: 100%;
+     margin: 0 auto;
 
     &--flex {
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: $medium-break) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -139,4 +150,8 @@ $medium-break: 850px;
     background-size: cover;
     background-position: 50%;
     height: 100vh;
+
+     @media(max-width: $medium-break) {
+         height: 100%;
+     }
 }
