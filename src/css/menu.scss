@@ -4,4 +4,12 @@
     color: #575757;
     margin-right: 50px;
     font-size: 14px;
+
+    @media(max-width: $medium-break) {
+        font-size: 18px;
+        padding: 20px 0;
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid #b9b8b9;
+    }
 }

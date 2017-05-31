@@ -1,5 +1,11 @@
 .social {
     display: flex;
+
+    @media(max-width: $medium-break) {
+        &--topnav {
+            display: none;
+        }
+    }
 }
 
 .social__icon {
