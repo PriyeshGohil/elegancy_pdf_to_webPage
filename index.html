@@ -68,14 +68,51 @@
             </div>
         </section>
 
-        <!--<section class="video">
-            <h2 class="heading">Learn more about Gravity</h2>
-        </section>
-
-        <section class="testimonials">
+        <section class="homepage-section">
             <h2 class="heading">what our clients think about us</h2>
-            <p class="testimonial__text">Te veniam electram consequuntur duo. Nibh oratio ex nam, ne per solum mollis prompta, te vel movet zril sensibus quis munere adipiscing prohas lorem mucius democritum sed nefty sonet efficiantur autem vim et qui facilisi eam adipisci assentior inimicus.</p>
-        </section>-->
+            <div class="testimonials container">
+                <div class="slider__btn" ><i class="fa fa-angle-left" id='slide-prev' aria-hidden="true"></i></div>
+                <figure id='slider' class="slider">
+                    <div class="slide">
+                        <p class="slide__txt">Te veniam electram consequuntur duo. Nibh oratio ex nam, ne per solum mollis prompta, te vel movet zril sensibus quis munere adipiscing prohas lorem mucius democritum sed nefty sonet efficiantur autem vim et qui facilisi eam adipisci assentior inimicus.</p>
+                        <div class="slide__img">
+                            <img src="imgs/team.png" alt="">
+                        </div>
+                        <h3 class="slide__authorName">fred perry</h3>
+                        <h4 class="slide__authorJob">creative director</h4>
+                    </div>
+
+                    <div class="slide">
+                        <p class="slide__txt">Te veniam electram consequuntur duo. Nibh oratio ex nam, ne per solum mollis prompta, te vel movet zril sensibus quis munere adipiscing prohas lorem mucius democritum sed nefty sonet efficiantur autem vim et qui facilisi eam adipisci assentior inimicus.</p>
+                        <div class="slide__img">
+                            <img src="" alt="">
+                        </div>
+                        <h3 class="slide__authorName">John smith</h3>
+                        <h4 class="slide__authorJob">Front-end developer</h4>
+                    </div>
+
+                    <div class="slide">
+                        <p class="slide__txt">Te veniam electram consequuntur duo. Nibh oratio ex nam, ne per solum mollis prompta, te vel movet zril sensibus quis munere adipiscing prohas lorem mucius democritum sed nefty sonet efficiantur autem vim et qui facilisi eam adipisci assentior inimicus.</p>
+                        <div class="slide__img">
+                            <img src="" alt="">
+                        </div>
+                        <h3 class="slide__authorName">Pall mall</h3>
+                        <h4 class="slide__authorJob">Back-end Developer</h4>
+                    </div>
+
+                    <div class="slide">
+                        <p class="slide__txt">Te veniam electram consequuntur duo. Nibh oratio ex nam, ne per solum mollis prompta, te vel movet zril sensibus quis munere adipiscing prohas lorem mucius democritum sed nefty sonet efficiantur autem vim et qui facilisi eam adipisci assentior inimicus.</p>
+                        <div class="slide__img">
+                            <img src="" alt="">
+                        </div>
+                        <h3 class="slide__authorName">Kirspy Kreme</h3>
+                        <h4 class="slide__authorJob">Doughnuts Maker</h4>
+                    </div>
+                </figure>
+                 <div class="slider__btn slider__btn--right"><i id='slide-next' class="fa fa-angle-right" aria-hidden="true"></i></div>
+                 
+            </div>
+        </section>
 
         <section class="homepage-section homepage-section--bgcolor">
             <h2 class="heading">The Team</h2>
@@ -297,11 +334,56 @@
         </footer> 
 
         <script>
+
+            //  mobile menu toggle
             const menuBtnEl = document.getElementById('menuBtn');
             const menuEl = document.getElementsByClassName('header__menu')[0];
             menuBtnEl.addEventListener('click', function() {
                 menuEl.classList.toggle('header__menu--open');
             })
+
+
+            // slider.js
+
+            const slider = function() {
+               const sliderEl = document.getElementById('slider');
+                const testimonialEl = document.getElementsByClassName('testimonials')[0];
+                // todo, should not be static value!
+                const sliderWidth = 1100; 
+                
+
+                // methods
+                testimonialEl.addEventListener('click', function(e) {                    
+                    if(e.target && e.target.nodeName === 'I') {
+                        handleSliderNav(e.target);
+                    }
+                })
+
+                function handleSliderNav(btn) {
+                    if(btn.id === 'slide-next') { slide('next'); return;}
+
+                    if(btn.id === 'slide-prev') { slide('prev'); return;}
+                }
+
+                function slide(pos) {
+                    //Number(window.getComputedStyle(sliderEl, null).left.split('px')[0]))
+                    // getComputedStyle() returns a string -> '128px'
+                    // so converted that to a number without the unit.
+                    // window.currentPos = Math.abs(Number(window.getComputedStyle(sliderEl, null).left.split('px')[0]));
+                    const currentLeftPos =  Number(window.getComputedStyle(sliderEl, null).left.split('px')[0]);
+                    const totalSlides = sliderEl.querySelectorAll('.slide').length;
+                    let move;
+                    
+                    if(pos === 'next') { move = ((currentLeftPos / sliderWidth) - 1) * 100;}
+
+                    if(pos === 'prev') { move = ((currentLeftPos / sliderWidth) + 1) * 100;}
+
+                    // if not end of slides move!
+                    if(!((move === 100) || move === -(totalSlides * 100))) sliderEl.style.left = `${move}%`;
+                }
+            }
+
+            slider();
         </script>
     </body>
 </html>
