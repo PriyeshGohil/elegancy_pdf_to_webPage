@@ -14,6 +14,7 @@ $small-break: 495px;
 @import 'project';
 @import 'client';
 @import 'forms';
+@import 'testimonials';
 @import 'footer';
 
 
@@ -42,11 +43,6 @@ $small-break: 495px;
 .video {
     height: 620px;
     background: #d1d1d1;
-}
-
-.testimonials {
-    height: 690px;
-    // background: #d1d1d1;
 }
 
 .homepage-section {
