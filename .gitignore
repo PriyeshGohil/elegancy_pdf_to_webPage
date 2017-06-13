@@ -62,5 +62,6 @@ typings/
 
 # build file Outputted by grunt
 build
+dist
 
 .DS_Store
