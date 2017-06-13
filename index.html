@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,600,700" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="build/css/main.css">
+        <link rel='stylesheet' href='dist/main.css'>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -328,62 +328,10 @@
                     </div>
                    </div>
             </div>
-            <div class='footer-bottom' >
+            <div class='footer-bottom'>
                 <a class="footer-bottom__text"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> back to the top</a>
             </div>
         </footer> 
-
-        <script>
-
-            //  mobile menu toggle
-            const menuBtnEl = document.getElementById('menuBtn');
-            const menuEl = document.getElementsByClassName('header__menu')[0];
-            menuBtnEl.addEventListener('click', function() {
-                menuEl.classList.toggle('header__menu--open');
-            })
-
-
-            // slider.js
-
-            const slider = function() {
-               const sliderEl = document.getElementById('slider');
-                const testimonialEl = document.getElementsByClassName('testimonials')[0];
-                // todo, should not be static value!
-                const sliderWidth = 1100; 
-                
-
-                // methods
-                testimonialEl.addEventListener('click', function(e) {                    
-                    if(e.target && e.target.nodeName === 'I') {
-                        handleSliderNav(e.target);
-                    }
-                })
-
-                function handleSliderNav(btn) {
-                    if(btn.id === 'slide-next') { slide('next'); return;}
-
-                    if(btn.id === 'slide-prev') { slide('prev'); return;}
-                }
-
-                function slide(pos) {
-                    //Number(window.getComputedStyle(sliderEl, null).left.split('px')[0]))
-                    // getComputedStyle() returns a string -> '128px'
-                    // so converted that to a number without the unit.
-                    // window.currentPos = Math.abs(Number(window.getComputedStyle(sliderEl, null).left.split('px')[0]));
-                    const currentLeftPos =  Number(window.getComputedStyle(sliderEl, null).left.split('px')[0]);
-                    const totalSlides = sliderEl.querySelectorAll('.slide').length;
-                    let move;
-                    
-                    if(pos === 'next') { move = ((currentLeftPos / sliderWidth) - 1) * 100;}
-
-                    if(pos === 'prev') { move = ((currentLeftPos / sliderWidth) + 1) * 100;}
-
-                    // if not end of slides move!
-                    if(!((move === 100) || move === -(totalSlides * 100))) sliderEl.style.left = `${move}%`;
-                }
-            }
-
-            slider();
-        </script>
+        <script src='dist/bundle.js'></script>
     </body>
 </html>
