@@ -20,13 +20,13 @@ $small-break: 495px;
 
 // custom fonts
 
-// @font-face {
-//     font-family: 'EternalFascination';
-//     src: url('../fonts/EternalFascination.ttf');
-// }
+@font-face {
+    font-family: 'EternalFascination';
+    src: url('../fonts/EternalFascination.ttf');
+}
 
 .wrapper {
-    // background: url('../../imgs/dominikschroder14534.png');
+    background: url('../../imgs/dominikschroder14534.png');
         background-size: cover;
     background-position: 50%;
     width: 100vw;
@@ -68,7 +68,7 @@ $small-break: 495px;
     color: #2d4e55;
 
     &:after {
-        // content: url('../../imgs/heading-line.png');
+        content: url('../../imgs/heading-line.png');
         position: absolute;
         margin-left: auto;
         margin-right: auto;
@@ -107,7 +107,7 @@ $small-break: 495px;
     padding-bottom: 125px;
 
      &:after {
-        // content: url('../../imgs/heading-line.png');
+        content: url('../../imgs/heading-line.png');
         position: absolute;
         margin-left: auto;
         margin-right: auto;

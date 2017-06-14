@@ -29,6 +29,14 @@ module.exports = {
                 use: extractPlugin.extract({
                     use: ['css-loader', 'sass-loader']
                 })
+            },
+            {
+                test: /\.png$/,
+                use: 'file-loader'
+            },
+            {
+                test: /\.ttf$/,
+                use: 'file-loader'
             }
         ]
     },
